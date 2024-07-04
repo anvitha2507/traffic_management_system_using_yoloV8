@@ -1,18 +1,43 @@
-# traffic_management_system_using_yoloV8
-**Overview**  
-This repository contains code for a Traffic Management System that employs YOLOv8 for real-time traffic object detection. The project is designed to detect various traffic elements such as vehicles which provide the class name and assign an unique ID for each vehicle providing a robust solution for monitoring and managing traffic flow.It also detects the red light violation and store the Unique ID's of violated vehicles in a file 
+# Traffic Object Detection and PDF Generation
 
-**Features:**
-**YOLOv8 Integration:** Utilizes the YOLOv8 model for accurate and efficient object detection. 
+This project combines real-time traffic object detection using YOLOv8 and PDF generation from text input using Flask.
 
-**Real-time Processing:** Provides real-time processing capabilities for monitoring traffic.   
+## Features
 
-**Vehicle Classification:** Classifies detected vehicles into categories such as cars,trucks.  
+### Real-time Object Detection
 
-**Traffic Flow Analysis:** Analyzes traffic patterns to optimize traffic light timings and manage congestion.  
+- Utilizes YOLOv8 for detecting vehicles (cars, trucks, buses, motorbikes) in a video feed or video file.
+- Tracks detected objects using SORT (Simple Online and Realtime Tracking) algorithm.
+- Counts and records the number of vehicles crossing a specified line in the video frame.
+- Displays real-time count of vehicles detected on the video stream.
 
+## Setup and Usage
 
-**Requirements**   
-Python 3.x
+### Prerequisites
 
-YOLOv8 weights file (download from the YOLOv8 repository)
+- Python 3.x
+- OpenCV (cv2)
+- cvzone
+- Sort (Simple Online and Realtime Tracking)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository_url>
+   cd <repository_name>
+2. Install dependencies:
+3. Running the application
+   ```bash
+    python tf.py
+
+##Usage
+Real-time Object Detection:
+
+- Open the video feed or upload a video file (video3.mp4).
+- Detects and tracks vehicles specified in classNames.
+- Counts vehicles crossing the specified line (limits) and logs into traffic_jam.txt.
+
+Contributing
+Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
